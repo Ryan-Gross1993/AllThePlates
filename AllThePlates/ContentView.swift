@@ -7,14 +7,6 @@
 
 import SwiftUI
 
-
-struct PlateCalculator {
-    static func calculate(targetWgt: Int, barWgt: Int, plates: [Plate]) -> [Plate] {
-        var plates: [Plate] = []
-        return plates
-    }
-}
-
 struct Plate {
     var wgt: Double
     var qt: String

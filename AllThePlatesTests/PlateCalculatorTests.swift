@@ -9,8 +9,8 @@ import XCTest
 @testable import AllThePlates
 
 class PlateCalculatorTests: XCTestCase {
-    let barWgt = 45
-    var targetWgt = 0
+    let barWgt: Double = 45
+    var targetWgt: Double = 0
     
     lazy var availPlates: [Plate] = {
         var plates: [Plate] = []
@@ -26,36 +26,58 @@ class PlateCalculatorTests: XCTestCase {
         return plates
     }()
 
-    func testPlateCalculator_Bar() throws {
-        targetWgt = 45
-        let plates = PlateCalculator.calculate(targetWgt: targetWgt, barWgt: barWgt, plates: availPlates)
-        XCTAssertTrue(plates.isEmpty)
+    func testCalculate_Bar() {
+        let plates = PlateCalculator.calculate(targetWgt: barWgt, barWgt: barWgt, plates: availPlates)
+        XCTAssertTrue(plates != nil)
+    }
+    
+    func testCalculate_OneFifty() {
+        targetWgt = 150
+        
+        if let plates = PlateCalculator.calculate(targetWgt: targetWgt, barWgt: barWgt, plates: availPlates) {
+            XCTAssertEqual(plates.count, 1)
+            
+            XCTAssertEqual(plates[0].wgt, 45)
+            XCTAssertEqual(plates[0].qt, "1")
+            
+            XCTAssertEqual(plates[1].wgt, 5)
+            XCTAssertEqual(plates[1].qt, "1")
+            
+            XCTAssertEqual(plates[2].wgt, 2.5)
+            XCTAssertEqual(plates[2].qt, "1")
+        }
     }
     
     func testPlateCalculator_ThreeFifteen() {
         targetWgt = 315
-        let plates = PlateCalculator.calculate(targetWgt: targetWgt, barWgt: barWgt, plates: availPlates)
-        XCTAssertEqual(plates.count, 1)
-        XCTAssertEqual(plates[0].wgt, 45)
-        XCTAssertEqual(plates[0].qt, "3")
+        
+        if let plates = PlateCalculator.calculate(targetWgt: targetWgt, barWgt: barWgt, plates: availPlates) {
+            XCTAssertEqual(plates.count, 1)
+            
+            XCTAssertEqual(plates[0].wgt, 45)
+            XCTAssertEqual(plates[0].qt, "3")
+        }
     }
-    
+
     func testPlateCalculator_FiveTwenty() {
         targetWgt = 520
-        let plates = PlateCalculator.calculate(targetWgt: targetWgt, barWgt: barWgt, plates: availPlates)
+        if let plates = PlateCalculator.calculate(targetWgt: targetWgt, barWgt: barWgt, plates: availPlates) {
+            XCTAssertEqual(plates.count, 5)
+            
+            XCTAssertEqual(plates[0].wgt, 2.5)
+            XCTAssertEqual(plates[0].qt, "1")
 
-        XCTAssertEqual(plates.count, 5)
-        
-        XCTAssertEqual(plates[0].wgt, 2.5)
-        XCTAssertEqual(plates[1].wgt, 5)
-        XCTAssertEqual(plates[2].wgt, 25)
-        XCTAssertEqual(plates[3].wgt, 35)
-        XCTAssertEqual(plates[4].wgt, 5)
-        
-        XCTAssertEqual(plates[0].qt, "1")
-        XCTAssertEqual(plates[1].qt, "1")
-        XCTAssertEqual(plates[2].qt, "1")
-        XCTAssertEqual(plates[3].qt, "2")
-        XCTAssertEqual(plates[4].qt, "3")
+            XCTAssertEqual(plates[1].wgt, 5)
+            XCTAssertEqual(plates[1].qt, "1")
+
+            XCTAssertEqual(plates[2].wgt, 25)
+            XCTAssertEqual(plates[2].qt, "1")
+            
+            XCTAssertEqual(plates[3].wgt, 35)
+            XCTAssertEqual(plates[3].qt, "2")
+            
+            XCTAssertEqual(plates[4].wgt, 5)
+            XCTAssertEqual(plates[4].qt, "3")
+        }
     }
 }

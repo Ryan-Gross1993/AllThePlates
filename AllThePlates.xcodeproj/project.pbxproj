@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0D0792E8260156BC006DEC8A /* PlateCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D0792E7260156BC006DEC8A /* PlateCalculator.swift */; };
 		0D90DA7725EF0E2700F2DEB0 /* PlateCalculatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D90DA7625EF0E2700F2DEB0 /* PlateCalculatorTests.swift */; };
 		0DD7D00D25EC3B440049D6FC /* AllThePlatesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DD7D00C25EC3B440049D6FC /* AllThePlatesApp.swift */; };
 		0DD7D00F25EC3B440049D6FC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DD7D00E25EC3B440049D6FC /* ContentView.swift */; };
@@ -34,6 +35,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0D0792E7260156BC006DEC8A /* PlateCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlateCalculator.swift; sourceTree = "<group>"; };
 		0D90DA7625EF0E2700F2DEB0 /* PlateCalculatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlateCalculatorTests.swift; sourceTree = "<group>"; };
 		0DD7D00925EC3B440049D6FC /* AllThePlates.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AllThePlates.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0DD7D00C25EC3B440049D6FC /* AllThePlatesApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllThePlatesApp.swift; sourceTree = "<group>"; };
@@ -102,6 +104,7 @@
 				0DD7D01025EC3B450049D6FC /* Assets.xcassets */,
 				0DD7D01525EC3B450049D6FC /* Info.plist */,
 				0DD7D01225EC3B450049D6FC /* Preview Content */,
+				0D0792E7260156BC006DEC8A /* PlateCalculator.swift */,
 			);
 			path = AllThePlates;
 			sourceTree = "<group>";
@@ -262,6 +265,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0D0792E8260156BC006DEC8A /* PlateCalculator.swift in Sources */,
 				0DD7D00F25EC3B440049D6FC /* ContentView.swift in Sources */,
 				0DD7D00D25EC3B440049D6FC /* AllThePlatesApp.swift in Sources */,
 			);
