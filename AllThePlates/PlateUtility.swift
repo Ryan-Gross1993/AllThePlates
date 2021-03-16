@@ -9,6 +9,7 @@ import Foundation
 
 struct PlateUtility {
     private static let plateWgts: [Double] = [100, 45, 25, 10, 2.5, 55, 35, 15, 5, 1.25]
+    
     static func generatePlates() -> [Plate] {
         var plates: [Plate] = []
         
