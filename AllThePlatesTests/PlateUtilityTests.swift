@@ -8,7 +8,7 @@
 import XCTest
 @testable import AllThePlates
 
-class PlateCalculatorTests: XCTestCase {
+class PlateUtilityTests: XCTestCase {
     let barWgt: Double = 45
     var targetWgt: Double = 0
     
@@ -27,14 +27,14 @@ class PlateCalculatorTests: XCTestCase {
     }()
 
     func testCalculate_Bar() {
-        let plates = PlateCalculator.calculate(targetWgt: barWgt, barWgt: barWgt, plates: availPlates)
+        let plates = PlateUtility.calculate(targetWgt: barWgt, barWgt: barWgt, plates: availPlates)
         XCTAssertTrue(plates != nil)
     }
     
     func testCalculate_OneFifty() {
         targetWgt = 150
         
-        if let plates = PlateCalculator.calculate(targetWgt: targetWgt, barWgt: barWgt, plates: availPlates) {
+        if let plates = PlateUtility.calculate(targetWgt: targetWgt, barWgt: barWgt, plates: availPlates) {
             XCTAssertEqual(plates.count, 1)
             
             XCTAssertEqual(plates[0].wgt, 45)
@@ -48,10 +48,10 @@ class PlateCalculatorTests: XCTestCase {
         }
     }
     
-    func testPlateCalculator_ThreeFifteen() {
+    func testCalculate_ThreeFifteen() {
         targetWgt = 315
         
-        if let plates = PlateCalculator.calculate(targetWgt: targetWgt, barWgt: barWgt, plates: availPlates) {
+        if let plates = PlateUtility.calculate(targetWgt: targetWgt, barWgt: barWgt, plates: availPlates) {
             XCTAssertEqual(plates.count, 1)
             
             XCTAssertEqual(plates[0].wgt, 45)
@@ -59,9 +59,9 @@ class PlateCalculatorTests: XCTestCase {
         }
     }
 
-    func testPlateCalculator_FiveTwenty() {
+    func testCalculate_FiveTwenty() {
         targetWgt = 520
-        if let plates = PlateCalculator.calculate(targetWgt: targetWgt, barWgt: barWgt, plates: availPlates) {
+        if let plates = PlateUtility.calculate(targetWgt: targetWgt, barWgt: barWgt, plates: availPlates) {
             XCTAssertEqual(plates.count, 5)
             
             XCTAssertEqual(plates[0].wgt, 2.5)
