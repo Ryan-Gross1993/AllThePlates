@@ -20,7 +20,6 @@ struct PlateUtility {
         return plates
     }
     
-    
     static func calculate(targetWgt: Double, barWgt: Double, plates: [Plate]) -> [Plate]? {
         var wgtOfPlates = targetWgt - barWgt
         var reqPlates: [Plate] = []
