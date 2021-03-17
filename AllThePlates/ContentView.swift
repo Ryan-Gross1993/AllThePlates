@@ -7,21 +7,13 @@
 
 import SwiftUI
 
-
-struct PlateCalculator {
-    static func calculate(targetWgt: Int, barWgt: Int, plates: [Plate]) -> [Plate] {
-        var plates: [Plate] = []
-        return plates
-    }
-}
-
 struct Plate {
     var wgt: Double
     var qt: String
 }
 
 struct PlateList: View {
-    @State var plates: [Plate] = generatePlates()
+    @State var plates: [Plate] = PlateUtility.generatePlates()
     
     var body: some View {
         HStack {
@@ -43,15 +35,7 @@ struct PlateList: View {
         }
     }
     
-    private static func generatePlates() -> [Plate] {
-        var plates: [Plate] = []
-        
-        for value in [100, 45, 25,10, 2.5, 55, 35, 15, 5, 1.25] {
-            plates.append(Plate(wgt: value, qt: "0"))
-        }
-        
-        return plates
-    }
+ 
     
     private func determineText(val: Double) -> String {
         if val.truncatingRemainder(dividingBy: 5.0) == 0.0 {
