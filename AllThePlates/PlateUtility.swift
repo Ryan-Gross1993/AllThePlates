@@ -1,5 +1,5 @@
 //
-//  PlateCalculator.swift
+//  PlateUtility.swift
 //  AllThePlates
 //
 //  Created by Ryan Gross on 3/16/21.

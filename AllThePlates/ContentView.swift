@@ -83,7 +83,6 @@ struct ContentView: View {
             .padding(.top, 35)
             HStack {
                 Button(action: {
-                    self.platesVisible = !platesVisible
                 }, label: {
                     Text("Set Weights")
                         .font(.body)
@@ -91,15 +90,17 @@ struct ContentView: View {
                 })
                 Button(action: {
                     // Calculate..
+                self.platesVisible = !platesVisible
                 }, label: {
                     Text("Calculate")
                 })
             }
 
-            if platesVisible {
-                plateList
-            }
             Spacer()
+            
+            if platesVisible {
+                BarbellView()
+            }
         }
     }
     
