@@ -23,6 +23,9 @@ class PlateUtilityTests: XCTestCase {
             }
         }
         
+        plates.sort { (a, b) -> Bool in
+            a.wgt > b.wgt
+        }
         return plates
     }()
 
@@ -35,7 +38,7 @@ class PlateUtilityTests: XCTestCase {
         targetWgt = 150
         
         if let plates = PlateUtility.calculate(targetWgt: targetWgt, barWgt: barWgt, plates: availPlates) {
-            XCTAssertEqual(plates.count, 1)
+            XCTAssertEqual(plates.count, 3)
             
             XCTAssertEqual(plates[0].wgt, 45)
             XCTAssertEqual(plates[0].qt, "1")
@@ -63,21 +66,21 @@ class PlateUtilityTests: XCTestCase {
         targetWgt = 520
         if let plates = PlateUtility.calculate(targetWgt: targetWgt, barWgt: barWgt, plates: availPlates) {
             XCTAssertEqual(plates.count, 5)
+   
+            XCTAssertEqual(plates[0].wgt, 45)
+            XCTAssertEqual(plates[0].qt, "3")
             
-            XCTAssertEqual(plates[0].wgt, 2.5)
-            XCTAssertEqual(plates[0].qt, "1")
-
-            XCTAssertEqual(plates[1].wgt, 5)
-            XCTAssertEqual(plates[1].qt, "1")
-
+            XCTAssertEqual(plates[1].wgt, 35)
+            XCTAssertEqual(plates[1].qt, "2")
+            
             XCTAssertEqual(plates[2].wgt, 25)
             XCTAssertEqual(plates[2].qt, "1")
             
-            XCTAssertEqual(plates[3].wgt, 35)
-            XCTAssertEqual(plates[3].qt, "2")
+            XCTAssertEqual(plates[3].wgt, 5)
+            XCTAssertEqual(plates[3].qt, "1")
             
-            XCTAssertEqual(plates[4].wgt, 5)
-            XCTAssertEqual(plates[4].qt, "3")
+            XCTAssertEqual(plates[4].wgt, 2.5)
+            XCTAssertEqual(plates[4].qt, "1")
         }
     }
 }

@@ -24,28 +24,38 @@ struct PlateUtility {
         var wgtOfPlates = targetWgt - barWgt
         var reqPlates: [Plate] = []
         
-        for plate in plates {
-            if plate.wgt > wgtOfPlates && wgtOfPlates > 0.0 {
+        if targetWgt == barWgt {
+            return []
+        } else {
+            for plate in plates.filter({ $0.qt != "0"}) {
                 guard let qt = Double(plate.qt) else {
                     continue
                 }
                 
-                var numNeeded = ceil(wgtOfPlates / qt)
+                if plate.wgt > wgtOfPlates {
+                    continue
+                }
                 
-                if numNeeded.truncatingRemainder(dividingBy: 2.0) > 0.0 {
-                    if numNeeded > 2.0 {
-                        numNeeded -= 1.0
+                var numAvailable = floor(wgtOfPlates / plate.wgt)
+                
+                if numAvailable > qt {
+                    numAvailable = qt
+                }
+                                
+                if Int(numAvailable) % 2 > 0 {
+                    if numAvailable > 2.0 {
+                        numAvailable -= 1.0
                     } else {
                         continue
                     }
                 }
                 
-                wgtOfPlates -= plate.wgt * numNeeded
-                let plate = Plate.init(wgt: plate.wgt, qt: String(format: "%g", numNeeded / 2.0))
+                wgtOfPlates -= plate.wgt * numAvailable
+                let plate = Plate.init(wgt: plate.wgt, qt: String(format: "%g", numAvailable / 2.0))
                 reqPlates.append(plate)
             }
+            
+            return wgtOfPlates == 0.0 ? reqPlates : nil
         }
-        
-        return wgtOfPlates == 0.0 ? reqPlates : nil
     }
 }
