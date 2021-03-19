@@ -30,10 +30,24 @@ struct PlateView: View, TextGeneratable {
     
     private func getColor() -> Color {
         switch self.wgt {
-        case 45.0:
+        case 55.0:
             return .red
-        default:
+        case 45.0:
+            return .blue
+        case 35.0:
             return .yellow
+        case 25.0:
+            return .green
+        case 15.0:
+            return .orange
+        case 10.0:
+            return .white
+        case 5.0:
+            return .purple
+        case 2.5:
+            return .pink
+        default:
+            return .gray
         }
     }
 }
