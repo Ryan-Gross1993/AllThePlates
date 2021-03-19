@@ -7,67 +7,6 @@
 
 import SwiftUI
 
-public protocol TextGeneratable {
-    func determineText(val: Double) -> String
-}
-    
-extension TextGeneratable {
-     func determineText(val: Double) -> String {
-        if val.truncatingRemainder(dividingBy: 5.0) == 0.0 {
-            return String(Int(val))
-        } else if val == 2.5 {
-            return String(format: "%.1f", val)
-        } else {
-            return String(format: "%.2f", val)
-        }
-    }
-}
-
-struct Plate: Hashable {
-    var wgt: Double
-    var qt: String
-}
-
-struct PlateList: View, TextGeneratable {
-    @Binding var plates: [Plate]
-    
-    var body: some View {
-        HStack {
-            ForEach(0..<2, id: \.self) { row in
-                let startIndex = row == 0 ? 0 : 5
-                let endIndex = row == 0 ? 5 : 10
-                VStack {
-                    ForEach(startIndex..<endIndex, id: \.self) { index in
-                        HStack {
-                            Text("\(self.determineText(val: plates[index].wgt))")
-                            TextField("0", text: $plates[index].qt)
-                                .frame(width: 25, alignment: .center)
-                                .textFieldStyle(RoundedBorderTextFieldStyle())
-                                .keyboardType(.numberPad)
-                        }
-                    }
-                }
-            }
-        }
-    }
-}
-
-struct WeightEditText: View {
-    var label: String
-    @Binding var wgtValue: String
-    
-    
-    var body: some View {
-        HStack(alignment: .center) {
-            Text(label)
-            TextField("", text: $wgtValue)
-                .fixedSize(horizontal: true, vertical: false)
-                .textFieldStyle(RoundedBorderTextFieldStyle())
-                .keyboardType(.decimalPad)
-        }
-    }
-}
-
 struct ContentView: View {
     @State var wgtsVisible = false
     @State var platesVisible = false

@@ -8,6 +8,11 @@
 import Foundation
 import SwiftUI
 
+struct Plate: Hashable {
+    var wgt: Double
+    var qt: String
+}
+
 struct PlateView: View, TextGeneratable {
     let wgt: Double
     var color: Color = .clear
