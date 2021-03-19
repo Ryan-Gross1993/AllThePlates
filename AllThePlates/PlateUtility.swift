@@ -1,5 +1,5 @@
 //
-//  PlateCalculator.swift
+//  PlateUtility.swift
 //  AllThePlates
 //
 //  Created by Ryan Gross on 3/16/21.
@@ -27,7 +27,7 @@ struct PlateUtility {
         if targetWgt == barWgt {
             return []
         } else {
-            for plate in plates.filter({ $0.qt != "0"}) {
+            for plate in plates.filter({ $0.qt != "0"}).sorted(by: {$0.wgt >= $1.wgt}) {
                 guard let qt = Double(plate.qt) else {
                     continue
                 }
