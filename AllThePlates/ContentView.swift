@@ -29,7 +29,7 @@ struct Plate: Hashable {
 }
 
 struct PlateList: View, TextGeneratable {
-    @State var plates: [Plate] = PlateUtility.generatePlates()
+    @Binding var plates: [Plate]
     
     var body: some View {
         HStack {
@@ -69,11 +69,11 @@ struct WeightEditText: View {
 }
 
 struct ContentView: View {
+    @State var wgtsVisible = false
     @State var platesVisible = false
     @State var targetWgt = "0.0"
     @State var barWgt = "0.0"
-    
-    let plateList = PlateList()
+    @State var plates = PlateUtility.generatePlates()
     
     var body: some View {
         VStack {
@@ -87,23 +87,29 @@ struct ContentView: View {
             .padding(.top, 35)
             HStack {
                 Button(action: {
+                    self.platesVisible = false
+                    self.wgtsVisible = !wgtsVisible
                 }, label: {
                     Text("Set Weights")
                         .font(.body)
-
+                    
                 })
                 Button(action: {
-                    // Calculate..
-                self.platesVisible = !platesVisible
+                    self.wgtsVisible = false
+                    self.platesVisible = !platesVisible
                 }, label: {
                     Text("Calculate")
                 })
+            }
+            
+            if wgtsVisible {
+                PlateList(plates: $plates)
             }
 
             Spacer()
             
             if platesVisible {
-                if let targetWgt = Double(targetWgt), let barWgt = Double(barWgt), let plates = PlateUtility.calculate(targetWgt: targetWgt, barWgt: barWgt, plates: plateList.plates) {
+                if let targetWgt = Double(targetWgt), let barWgt = Double(barWgt), let plates = PlateUtility.calculate(targetWgt: targetWgt, barWgt: barWgt, plates: plates) {
                     BarbellView(plates: plates)
                 }
             }
