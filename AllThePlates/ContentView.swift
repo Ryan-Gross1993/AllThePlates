@@ -103,16 +103,6 @@ struct ContentView: View {
             }
         }
     }
-    
-    private func generatePlates() -> [Plate] {
-        var plates: [Plate] = []
-        
-        for value in [100, 55, 45, 35, 25, 15, 10, 5, 2.5, 1.25] {
-            plates.append(Plate(wgt: value, qt: "0"))
-        }
-        
-        return plates
-    }
 }
 
 struct ContentView_Previews: PreviewProvider {
