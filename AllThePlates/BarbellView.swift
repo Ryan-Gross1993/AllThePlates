@@ -18,7 +18,12 @@ struct BarbellView: View {
             
             HStack(spacing: 5) {
                 ForEach(plates.reversed(), id: \.self) { plate in
-                    PlateView(wgt: plate.wgt)
+                    if let qtVal = Int(plate.qt) {
+                        ForEach(0..<qtVal) { _ in
+                            PlateView(wgt: plate.wgt)
+                        }
+                    }
+                 
                 }
               
                 Spacer()
@@ -29,7 +34,11 @@ struct BarbellView: View {
             HStack(spacing: 5) {
                 Spacer()
                 ForEach(plates, id: \.self) { plate in
-                    PlateView(wgt: plate.wgt)
+                    if let qtVal = Int(plate.qt) {
+                        ForEach(0..<qtVal) { _ in
+                            PlateView(wgt: plate.wgt)
+                        }
+                    }
                 }
             }
         }
