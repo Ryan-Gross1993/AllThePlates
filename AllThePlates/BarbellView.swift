@@ -9,14 +9,18 @@ import Foundation
 import SwiftUI
 
 struct BarbellView: View {
+    @State var plates: [Plate]
+    
     var body: some View {
         ZStack {
             Rectangle()
                 .frame(height: 25, alignment: .center)
             
             HStack(spacing: 5) {
-                PlateView(wgt: 45.0)
-                PlateView(wgt: 25.0)
+                ForEach(plates.reversed(), id: \.self) { plate in
+                    PlateView(wgt: plate.wgt)
+                }
+              
                 Spacer()
             }
             
@@ -24,8 +28,9 @@ struct BarbellView: View {
             
             HStack(spacing: 5) {
                 Spacer()
-                PlateView(wgt: 25.0)
-                PlateView(wgt: 45.0)
+                ForEach(plates, id: \.self) { plate in
+                    PlateView(wgt: plate.wgt)
+                }
             }
         }
     }

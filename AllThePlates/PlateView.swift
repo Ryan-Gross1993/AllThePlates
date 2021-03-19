@@ -8,7 +8,7 @@
 import Foundation
 import SwiftUI
 
-struct PlateView: View {
+struct PlateView: View, TextGeneratable {
     let wgt: Double
     var color: Color = .clear
     
@@ -18,7 +18,7 @@ struct PlateView: View {
     }
     
     var body: some View {
-        Text(String(format: "%.0f", self.wgt))
+        Text(String(determineText(val: self.wgt)))
             .frame(width: 25, height: 100)
             .background(Rectangle().foregroundColor(self.color))
     }

@@ -7,12 +7,28 @@
 
 import SwiftUI
 
-struct Plate {
+public protocol TextGeneratable {
+    func determineText(val: Double) -> String
+}
+    
+extension TextGeneratable {
+     func determineText(val: Double) -> String {
+        if val.truncatingRemainder(dividingBy: 5.0) == 0.0 {
+            return String(Int(val))
+        } else if val == 2.5 {
+            return String(format: "%.1f", val)
+        } else {
+            return String(format: "%.2f", val)
+        }
+    }
+}
+
+struct Plate: Hashable {
     var wgt: Double
     var qt: String
 }
 
-struct PlateList: View {
+struct PlateList: View, TextGeneratable {
     @State var plates: [Plate] = PlateUtility.generatePlates()
     
     var body: some View {
@@ -32,18 +48,6 @@ struct PlateList: View {
                     }
                 }
             }
-        }
-    }
-    
- 
-    
-    private func determineText(val: Double) -> String {
-        if val.truncatingRemainder(dividingBy: 5.0) == 0.0 {
-            return String(Int(val))
-        } else if val == 2.5 {
-            return String(format: "%.1f", val)
-        } else {
-            return String(format: "%.2f", val)
         }
     }
 }
@@ -99,7 +103,9 @@ struct ContentView: View {
             Spacer()
             
             if platesVisible {
-                BarbellView()
+                if let targetWgt = Double(targetWgt), let barWgt = Double(barWgt), let plates = PlateUtility.calculate(targetWgt: targetWgt, barWgt: barWgt, plates: plateList.plates) {
+                    BarbellView(plates: plates)
+                }
             }
         }
     }
