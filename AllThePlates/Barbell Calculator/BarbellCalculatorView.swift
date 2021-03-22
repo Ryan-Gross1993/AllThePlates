@@ -1,14 +1,19 @@
 //
-//  ContentView.swift
+//  BarbellCalculatorView.swift
 //  AllThePlates
 //
-//  Created by Ryan Gross on 2/28/21.
+//  Created by Ryan Gross on 3/21/21.
 //
 
+import Foundation
 import SwiftUI
 
-struct ContentView: View {
-
+struct BarbellCalculatorView: View {
+    @State var wgtsVisible = false
+    @State var platesVisible = false
+    @State var targetWgt = "0.0"
+    @State var barWgt = "0.0"
+    @State var plates = PlateUtility.generatePlates()
     
     var body: some View {
         VStack {
@@ -40,7 +45,7 @@ struct ContentView: View {
             if wgtsVisible {
                 PlateList(plates: $plates)
             }
-
+            
             Spacer()
             
             if platesVisible {
@@ -49,11 +54,5 @@ struct ContentView: View {
                 }
             }
         }
-    }
-}
-
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView()
     }
 }
