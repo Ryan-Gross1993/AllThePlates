@@ -36,10 +36,7 @@ struct PlateList: View, TextGeneratable {
                     ForEach(startIndex..<endIndex, id: \.self) { index in
                         HStack {
                             Text("\(self.determineText(val: plates[index].wgt))")
-                            TextField("0", text: $plates[index].qt)
-                                .frame(width: 25, alignment: .center)
-                                .textFieldStyle(RoundedBorderTextFieldStyle())
-                                .keyboardType(.numberPad)
+                            Stepper("\(plates[index].qt)", value: $plates[index].qt, in: 0...10, step: 1)
                         }
                     }
                 }

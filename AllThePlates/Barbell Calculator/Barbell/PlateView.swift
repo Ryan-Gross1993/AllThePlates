@@ -9,8 +9,8 @@ import Foundation
 import SwiftUI
 
 struct Plate: Hashable {
+    var qt: Int
     var wgt: Double
-    var qt: String
 }
 
 struct PlateView: View, TextGeneratable {

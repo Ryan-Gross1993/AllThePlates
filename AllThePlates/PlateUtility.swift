@@ -14,7 +14,7 @@ struct PlateUtility {
         var plates: [Plate] = []
         
         for value in plateWgts {
-            plates.append(Plate(wgt: value, qt: "0"))
+            plates.append(Plate(qt: 0, wgt: value))
         }
         
         return plates
@@ -27,10 +27,8 @@ struct PlateUtility {
         if targetWgt == barWgt {
             return []
         } else {
-            for plate in plates.filter({ $0.qt != "0"}).sorted(by: {$0.wgt >= $1.wgt}) {
-                guard let qt = Double(plate.qt) else {
-                    continue
-                }
+            for plate in plates.filter({ $0.qt != 0 }).sorted(by: {$0.wgt >= $1.wgt}) {
+                let qt = Double(plate.qt)
                 
                 if plate.wgt > wgtOfPlates {
                     continue
@@ -51,7 +49,7 @@ struct PlateUtility {
                 }
                 
                 wgtOfPlates -= plate.wgt * numAvailable
-                let plate = Plate.init(wgt: plate.wgt, qt: String(format: "%g", numAvailable / 2.0))
+                let plate = Plate.init(qt: Int(numAvailable / 2.0), wgt: plate.wgt)
                 reqPlates.append(plate)
             }
             
