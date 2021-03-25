@@ -9,7 +9,9 @@ import Foundation
 import SwiftUI
 
 struct PlateSettingsView: View {
+    @State var plates: [Plate] = PlateUtility.generatePlates()
     var body: some View {
-        Text("Plate Settings")
+        FrontPlateView()
+//        PlateList(plates: self.$plates)
     }
 }

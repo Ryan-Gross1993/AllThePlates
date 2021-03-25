@@ -15,6 +15,7 @@
 		0D82B4AB260831E40004180E /* BarbellCalculatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D82B4AA260831E40004180E /* BarbellCalculatorView.swift */; };
 		0D82B4B0260833CF0004180E /* PlateSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D82B4AF260833CF0004180E /* PlateSettingsView.swift */; };
 		0D90DA7725EF0E2700F2DEB0 /* PlateUtilityTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D90DA7625EF0E2700F2DEB0 /* PlateUtilityTests.swift */; };
+		0DA5B658260C2A0300423E6F /* FrontPlateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DA5B657260C2A0300423E6F /* FrontPlateView.swift */; };
 		0DD7D00D25EC3B440049D6FC /* AllThePlatesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DD7D00C25EC3B440049D6FC /* AllThePlatesApp.swift */; };
 		0DD7D00F25EC3B440049D6FC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DD7D00E25EC3B440049D6FC /* ContentView.swift */; };
 		0DD7D01125EC3B450049D6FC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0DD7D01025EC3B450049D6FC /* Assets.xcassets */; };
@@ -49,6 +50,7 @@
 		0D82B4AA260831E40004180E /* BarbellCalculatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarbellCalculatorView.swift; sourceTree = "<group>"; };
 		0D82B4AF260833CF0004180E /* PlateSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlateSettingsView.swift; sourceTree = "<group>"; };
 		0D90DA7625EF0E2700F2DEB0 /* PlateUtilityTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlateUtilityTests.swift; sourceTree = "<group>"; };
+		0DA5B657260C2A0300423E6F /* FrontPlateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrontPlateView.swift; sourceTree = "<group>"; };
 		0DD7D00925EC3B440049D6FC /* AllThePlates.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AllThePlates.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0DD7D00C25EC3B440049D6FC /* AllThePlatesApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllThePlatesApp.swift; sourceTree = "<group>"; };
 		0DD7D00E25EC3B440049D6FC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -182,6 +184,7 @@
 			children = (
 				0D82B4AF260833CF0004180E /* PlateSettingsView.swift */,
 				0D528272260503EE0083477F /* PlateList.swift */,
+				0DA5B657260C2A0300423E6F /* FrontPlateView.swift */,
 			);
 			path = Settings;
 			sourceTree = "<group>";
@@ -316,6 +319,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0D0792E8260156BC006DEC8A /* PlateUtility.swift in Sources */,
+				0DA5B658260C2A0300423E6F /* FrontPlateView.swift in Sources */,
 				0DD7D00F25EC3B440049D6FC /* ContentView.swift in Sources */,
 				0D39C63C260415B90050340B /* BarbellView.swift in Sources */,
 				0DD7D00D25EC3B440049D6FC /* AllThePlatesApp.swift in Sources */,
