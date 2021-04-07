@@ -7,11 +7,17 @@
 
 import Foundation
 import SwiftUI
+import SwiftUIPager
 
 struct PlateSettingsView: View {
     @State var plates: [Plate] = PlateUtility.generatePlates()
+    @StateObject var page = Page.first()
     var body: some View {
-        FrontPlateView()
-//        PlateList(plates: self.$plates)
+        Pager(page: page,
+              data: plates,
+              id: \.self,
+              content: { plate in
+                FrontPlateView(plate: plate)
+              })
     }
 }

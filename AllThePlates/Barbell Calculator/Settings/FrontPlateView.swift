@@ -9,22 +9,28 @@ import Foundation
 import SwiftUI
 
 // TODO: Dynamic color based on weight.
-struct FrontPlateView: View {
+struct FrontPlateView: View, Plateable, TextGeneratable {
+    var wgt: Double?
+    
+    init(plate: Plate) {
+        self.wgt = plate.wgt
+    }
+    
     var body: some View {
         ZStack {
             Circle()
                 .strokeBorder(Color.black, lineWidth: 2)
-                .background(Circle().foregroundColor(Color.red))
+                .background(Circle().foregroundColor(getColor()))
                 .frame(width: 120, height: 120)
 
             Circle()
                 .strokeBorder(Color.black, lineWidth: 2)
-                .background(Circle().foregroundColor(Color.red))
+                .background(Circle().foregroundColor(getColor()))
                 .frame(width: 100, height: 100)
 
             Circle()
                 .strokeBorder(Color.black, lineWidth: 2)
-                .background(Circle().foregroundColor(Color.red))
+                .background(Circle().foregroundColor(getColor()))
                 .frame(width: 40, height: 40)
 
             Circle()
@@ -32,12 +38,12 @@ struct FrontPlateView: View {
                 .background(Circle().foregroundColor(Color.white))
                 .frame(width: 20, height: 20)
             
-            Text("45")
+            Text("\(determineText(val: wgt ?? 0.0))")
                 .bold()
                 .offset(x: -35)
                 .foregroundColor(.white)
             
-            Text("45")
+            Text("\(determineText(val: wgt ?? 0.0))")
                 .bold()
                 .offset(x: 35)
                 .foregroundColor(.white)
