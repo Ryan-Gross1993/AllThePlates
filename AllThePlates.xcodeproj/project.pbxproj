@@ -13,6 +13,16 @@
 		0D528273260503EE0083477F /* PlateList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D528272260503EE0083477F /* PlateList.swift */; };
 		0D5282782605046B0083477F /* WeightEditText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D5282772605046B0083477F /* WeightEditText.swift */; };
 		0D90DA7725EF0E2700F2DEB0 /* PlateUtilityTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D90DA7625EF0E2700F2DEB0 /* PlateUtilityTests.swift */; };
+		0D997515261FE39B0094F289 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0D997514261FE39B0094F289 /* Assets.xcassets */; };
+		0D99751C261FE39C0094F289 /* ATPWatch Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 0D99751B261FE39C0094F289 /* ATPWatch Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		0D997521261FE39C0094F289 /* AllThePlatesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D997520261FE39C0094F289 /* AllThePlatesApp.swift */; };
+		0D997523261FE39C0094F289 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D997522261FE39C0094F289 /* ContentView.swift */; };
+		0D997525261FE39C0094F289 /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D997524261FE39C0094F289 /* NotificationController.swift */; };
+		0D997527261FE39C0094F289 /* NotificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D997526261FE39C0094F289 /* NotificationView.swift */; };
+		0D997529261FE39C0094F289 /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D997528261FE39C0094F289 /* ComplicationController.swift */; };
+		0D99752B261FE39E0094F289 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0D99752A261FE39E0094F289 /* Assets.xcassets */; };
+		0D99752E261FE39E0094F289 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0D99752D261FE39E0094F289 /* Preview Assets.xcassets */; };
+		0D997533261FE39E0094F289 /* ATPWatch.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 0D997512261FE3980094F289 /* ATPWatch.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		0DD7D00D25EC3B440049D6FC /* AllThePlatesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DD7D00C25EC3B440049D6FC /* AllThePlatesApp.swift */; };
 		0DD7D00F25EC3B440049D6FC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DD7D00E25EC3B440049D6FC /* ContentView.swift */; };
 		0DD7D01125EC3B450049D6FC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0DD7D01025EC3B450049D6FC /* Assets.xcassets */; };
@@ -22,6 +32,20 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		0D99751D261FE39C0094F289 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0DD7D00125EC3B440049D6FC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0D99751A261FE39C0094F289;
+			remoteInfo = "ATPWatch Extension";
+		};
+		0D997531261FE39E0094F289 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0DD7D00125EC3B440049D6FC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0D997511261FE3980094F289;
+			remoteInfo = ATPWatch;
+		};
 		0DD7D01B25EC3B460049D6FC /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 0DD7D00125EC3B440049D6FC /* Project object */;
@@ -38,6 +62,31 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		0D997534261FE39E0094F289 /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				0D997533261FE39E0094F289 /* ATPWatch.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0D997537261FE39E0094F289 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				0D99751C261FE39C0094F289 /* ATPWatch Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		0D0792E7260156BC006DEC8A /* PlateUtility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlateUtility.swift; sourceTree = "<group>"; };
 		0D39C633260414D30050340B /* PlateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlateView.swift; sourceTree = "<group>"; };
@@ -45,6 +94,19 @@
 		0D528272260503EE0083477F /* PlateList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlateList.swift; sourceTree = "<group>"; };
 		0D5282772605046B0083477F /* WeightEditText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeightEditText.swift; sourceTree = "<group>"; };
 		0D90DA7625EF0E2700F2DEB0 /* PlateUtilityTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlateUtilityTests.swift; sourceTree = "<group>"; };
+		0D997512261FE3980094F289 /* ATPWatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ATPWatch.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		0D997514261FE39B0094F289 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		0D997516261FE39B0094F289 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0D99751B261FE39C0094F289 /* ATPWatch Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "ATPWatch Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0D997520261FE39C0094F289 /* AllThePlatesApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllThePlatesApp.swift; sourceTree = "<group>"; };
+		0D997522261FE39C0094F289 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		0D997524261FE39C0094F289 /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
+		0D997526261FE39C0094F289 /* NotificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationView.swift; sourceTree = "<group>"; };
+		0D997528261FE39C0094F289 /* ComplicationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplicationController.swift; sourceTree = "<group>"; };
+		0D99752A261FE39E0094F289 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		0D99752D261FE39E0094F289 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		0D99752F261FE39E0094F289 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0D997530261FE39E0094F289 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
 		0DD7D00925EC3B440049D6FC /* AllThePlates.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AllThePlates.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0DD7D00C25EC3B440049D6FC /* AllThePlatesApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllThePlatesApp.swift; sourceTree = "<group>"; };
 		0DD7D00E25EC3B440049D6FC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -60,6 +122,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		0D997518261FE39C0094F289 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		0DD7D00625EC3B440049D6FC /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -95,12 +164,47 @@
 			name = Views;
 			sourceTree = "<group>";
 		};
+		0D997513261FE3980094F289 /* ATPWatch */ = {
+			isa = PBXGroup;
+			children = (
+				0D997514261FE39B0094F289 /* Assets.xcassets */,
+				0D997516261FE39B0094F289 /* Info.plist */,
+			);
+			path = ATPWatch;
+			sourceTree = "<group>";
+		};
+		0D99751F261FE39C0094F289 /* ATPWatch Extension */ = {
+			isa = PBXGroup;
+			children = (
+				0D997520261FE39C0094F289 /* AllThePlatesApp.swift */,
+				0D997522261FE39C0094F289 /* ContentView.swift */,
+				0D997524261FE39C0094F289 /* NotificationController.swift */,
+				0D997526261FE39C0094F289 /* NotificationView.swift */,
+				0D997528261FE39C0094F289 /* ComplicationController.swift */,
+				0D99752A261FE39E0094F289 /* Assets.xcassets */,
+				0D99752F261FE39E0094F289 /* Info.plist */,
+				0D997530261FE39E0094F289 /* PushNotificationPayload.apns */,
+				0D99752C261FE39E0094F289 /* Preview Content */,
+			);
+			path = "ATPWatch Extension";
+			sourceTree = "<group>";
+		};
+		0D99752C261FE39E0094F289 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				0D99752D261FE39E0094F289 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
 		0DD7D00025EC3B440049D6FC = {
 			isa = PBXGroup;
 			children = (
 				0DD7D00B25EC3B440049D6FC /* AllThePlates */,
 				0DD7D01D25EC3B460049D6FC /* AllThePlatesTests */,
 				0DD7D02825EC3B460049D6FC /* AllThePlatesUITests */,
+				0D997513261FE3980094F289 /* ATPWatch */,
+				0D99751F261FE39C0094F289 /* ATPWatch Extension */,
 				0DD7D00A25EC3B440049D6FC /* Products */,
 			);
 			sourceTree = "<group>";
@@ -111,6 +215,8 @@
 				0DD7D00925EC3B440049D6FC /* AllThePlates.app */,
 				0DD7D01A25EC3B460049D6FC /* AllThePlatesTests.xctest */,
 				0DD7D02525EC3B460049D6FC /* AllThePlatesUITests.xctest */,
+				0D997512261FE3980094F289 /* ATPWatch.app */,
+				0D99751B261FE39C0094F289 /* ATPWatch Extension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -159,6 +265,40 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		0D997511261FE3980094F289 /* ATPWatch */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0D99753B261FE39E0094F289 /* Build configuration list for PBXNativeTarget "ATPWatch" */;
+			buildPhases = (
+				0D997510261FE3980094F289 /* Resources */,
+				0D997537261FE39E0094F289 /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0D99751E261FE39C0094F289 /* PBXTargetDependency */,
+			);
+			name = ATPWatch;
+			productName = ATPWatch;
+			productReference = 0D997512261FE3980094F289 /* ATPWatch.app */;
+			productType = "com.apple.product-type.application.watchapp2";
+		};
+		0D99751A261FE39C0094F289 /* ATPWatch Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0D99753A261FE39E0094F289 /* Build configuration list for PBXNativeTarget "ATPWatch Extension" */;
+			buildPhases = (
+				0D997517261FE39C0094F289 /* Sources */,
+				0D997518261FE39C0094F289 /* Frameworks */,
+				0D997519261FE39C0094F289 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "ATPWatch Extension";
+			productName = "ATPWatch Extension";
+			productReference = 0D99751B261FE39C0094F289 /* ATPWatch Extension.appex */;
+			productType = "com.apple.product-type.watchkit2-extension";
+		};
 		0DD7D00825EC3B440049D6FC /* AllThePlates */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0DD7D02E25EC3B460049D6FC /* Build configuration list for PBXNativeTarget "AllThePlates" */;
@@ -166,10 +306,12 @@
 				0DD7D00525EC3B440049D6FC /* Sources */,
 				0DD7D00625EC3B440049D6FC /* Frameworks */,
 				0DD7D00725EC3B440049D6FC /* Resources */,
+				0D997534261FE39E0094F289 /* Embed Watch Content */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				0D997532261FE39E0094F289 /* PBXTargetDependency */,
 			);
 			name = AllThePlates;
 			productName = AllThePlates;
@@ -221,6 +363,12 @@
 				LastSwiftUpdateCheck = 1240;
 				LastUpgradeCheck = 1240;
 				TargetAttributes = {
+					0D997511261FE3980094F289 = {
+						CreatedOnToolsVersion = 12.4;
+					};
+					0D99751A261FE39C0094F289 = {
+						CreatedOnToolsVersion = 12.4;
+					};
 					0DD7D00825EC3B440049D6FC = {
 						CreatedOnToolsVersion = 12.4;
 					};
@@ -250,11 +398,30 @@
 				0DD7D00825EC3B440049D6FC /* AllThePlates */,
 				0DD7D01925EC3B460049D6FC /* AllThePlatesTests */,
 				0DD7D02425EC3B460049D6FC /* AllThePlatesUITests */,
+				0D997511261FE3980094F289 /* ATPWatch */,
+				0D99751A261FE39C0094F289 /* ATPWatch Extension */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		0D997510261FE3980094F289 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0D997515261FE39B0094F289 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0D997519261FE39C0094F289 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0D99752E261FE39E0094F289 /* Preview Assets.xcassets in Resources */,
+				0D99752B261FE39E0094F289 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		0DD7D00725EC3B440049D6FC /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -281,6 +448,18 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		0D997517261FE39C0094F289 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0D997525261FE39C0094F289 /* NotificationController.swift in Sources */,
+				0D997523261FE39C0094F289 /* ContentView.swift in Sources */,
+				0D997529261FE39C0094F289 /* ComplicationController.swift in Sources */,
+				0D997521261FE39C0094F289 /* AllThePlatesApp.swift in Sources */,
+				0D997527261FE39C0094F289 /* NotificationView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		0DD7D00525EC3B440049D6FC /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -315,6 +494,16 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		0D99751E261FE39C0094F289 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0D99751A261FE39C0094F289 /* ATPWatch Extension */;
+			targetProxy = 0D99751D261FE39C0094F289 /* PBXContainerItemProxy */;
+		};
+		0D997532261FE39E0094F289 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0D997511261FE3980094F289 /* ATPWatch */;
+			targetProxy = 0D997531261FE39E0094F289 /* PBXContainerItemProxy */;
+		};
 		0DD7D01C25EC3B460049D6FC /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 0DD7D00825EC3B440049D6FC /* AllThePlates */;
@@ -328,6 +517,94 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		0D997535261FE39E0094F289 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = QEN9HFF463;
+				IBSC_MODULE = ATPWatch_Extension;
+				INFOPLIST_FILE = ATPWatch/Info.plist;
+				PRODUCT_BUNDLE_IDENTIFIER = com.rgross.AllThePlates.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 7.2;
+			};
+			name = Debug;
+		};
+		0D997536261FE39E0094F289 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = QEN9HFF463;
+				IBSC_MODULE = ATPWatch_Extension;
+				INFOPLIST_FILE = ATPWatch/Info.plist;
+				PRODUCT_BUNDLE_IDENTIFIER = com.rgross.AllThePlates.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 7.2;
+			};
+			name = Release;
+		};
+		0D997538261FE39E0094F289 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"ATPWatch Extension/Preview Content\"";
+				DEVELOPMENT_TEAM = QEN9HFF463;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "ATPWatch Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.rgross.AllThePlates.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 7.2;
+			};
+			name = Debug;
+		};
+		0D997539261FE39E0094F289 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"ATPWatch Extension/Preview Content\"";
+				DEVELOPMENT_TEAM = QEN9HFF463;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "ATPWatch Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.rgross.AllThePlates.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 7.2;
+			};
+			name = Release;
+		};
 		0DD7D02C25EC3B460049D6FC /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -575,6 +852,24 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		0D99753A261FE39E0094F289 /* Build configuration list for PBXNativeTarget "ATPWatch Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0D997538261FE39E0094F289 /* Debug */,
+				0D997539261FE39E0094F289 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0D99753B261FE39E0094F289 /* Build configuration list for PBXNativeTarget "ATPWatch" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0D997535261FE39E0094F289 /* Debug */,
+				0D997536261FE39E0094F289 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		0DD7D00425EC3B440049D6FC /* Build configuration list for PBXProject "AllThePlates" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
