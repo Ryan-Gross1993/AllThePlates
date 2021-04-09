@@ -10,11 +10,20 @@ import Foundation
 struct PlateUtility {
     private static let plateWgts: [Double] = [100, 45, 25, 10, 2.5, 55, 35, 15, 5, 1.25]
     
+    static var wgtFormat: NumberFormatter = {
+        let formatter = NumberFormatter()
+        formatter.numberStyle = .decimal
+        formatter.usesSignificantDigits = true
+        formatter.minimumSignificantDigits = 1
+        formatter.maximumSignificantDigits = 5
+        return formatter
+    }()
+    
     static func generatePlates() -> [Plate] {
         var plates: [Plate] = []
         
         for value in plateWgts {
-            plates.append(Plate(wgt: value, qt: "0"))
+            plates.append(Plate(wgt: value, qt: 0))
         }
         
         return plates
@@ -27,10 +36,8 @@ struct PlateUtility {
         if targetWgt == barWgt {
             return []
         } else {
-            for plate in plates.filter({ $0.qt != "0"}).sorted(by: {$0.wgt >= $1.wgt}) {
-                guard let qt = Double(plate.qt) else {
-                    continue
-                }
+            for plate in plates.filter({ $0.qt > 0}).sorted(by: {$0.wgt >= $1.wgt}) {
+                let qt = Double(plate.qt)
                 
                 if plate.wgt > wgtOfPlates {
                     continue
@@ -51,7 +58,7 @@ struct PlateUtility {
                 }
                 
                 wgtOfPlates -= plate.wgt * numAvailable
-                let plate = Plate.init(wgt: plate.wgt, qt: String(format: "%g", numAvailable / 2.0))
+                let plate = Plate.init(wgt: plate.wgt, qt: Int(floor(numAvailable) / 2))
                 reqPlates.append(plate)
             }
             
