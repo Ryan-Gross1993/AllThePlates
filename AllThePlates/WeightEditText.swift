@@ -8,14 +8,16 @@
 import Foundation
 import SwiftUI
 
-struct WeightEditText: View {
+
+// https://stackoverflow.com/questions/59507471/use-bindingint-with-a-textfield-swiftui
+struct WeightEditText: View, TextGeneratable {
     var label: String
-    @Binding var wgtValue: String
+    @Binding var wgtValue: Double
     
     var body: some View {
         HStack(alignment: .center) {
             Text(label)
-            TextField("", text: $wgtValue)
+            TextField("", value: $wgtValue, formatter: PlateUtility.wgtFormat)
                 .fixedSize(horizontal: true, vertical: false)
                 .textFieldStyle(RoundedBorderTextFieldStyle())
                 .keyboardType(.decimalPad)

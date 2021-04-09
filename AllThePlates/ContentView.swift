@@ -10,8 +10,8 @@ import SwiftUI
 struct ContentView: View {
     @State var wgtsVisible = false
     @State var platesVisible = false
-    @State var targetWgt = "0.0"
-    @State var barWgt = "0.0"
+    @State var targetWgt = 0.0
+    @State var barWgt = 0.0
     @State var plates = PlateUtility.generatePlates()
     
     var body: some View {
