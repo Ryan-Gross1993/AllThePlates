@@ -10,7 +10,7 @@ import SwiftUI
 
 
 // https://stackoverflow.com/questions/59507471/use-bindingint-with-a-textfield-swiftui
-struct WeightEditText: View, TextGeneratable {
+struct WeightEditText: View {
     var label: String
     @Binding var wgtValue: Double
     

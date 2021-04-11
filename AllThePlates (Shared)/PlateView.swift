@@ -13,7 +13,7 @@ struct Plate: Hashable {
     var qt: Int
 }
 
-struct PlateView: View, TextGeneratable {
+struct PlateView: View {
     let wgt: Double
     var color: Color = .clear
     var borderWidth = 0
@@ -28,7 +28,7 @@ struct PlateView: View, TextGeneratable {
     }
     
     var body: some View {
-        Text(String(determineText(val: self.wgt)))
+        Text(PlateUtility.wgtFormat.string(from: NSNumber(value: self.wgt)) ?? "")
             .frame(width: 25, height: 100)
             .background(Rectangle().foregroundColor(self.color))
             .border(Color.black, width: CGFloat(self.borderWidth))

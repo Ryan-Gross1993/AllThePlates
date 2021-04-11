@@ -8,23 +8,7 @@
 import Foundation
 import SwiftUI
 
-protocol TextGeneratable {
-    func determineText(val: Double) -> String
-}
-    
-extension TextGeneratable {
-     func determineText(val: Double) -> String {
-        if val.truncatingRemainder(dividingBy: 5.0) == 0.0 {
-            return String(Int(val))
-        } else if val == 2.5 {
-            return String(format: "%.1f", val)
-        } else {
-            return String(format: "%.2f", val)
-        }
-    }
-}
-
-struct PlateList: View, TextGeneratable {
+struct PlateList: View {
     @Binding var plates: [Plate]
     
     var body: some View {
@@ -35,7 +19,7 @@ struct PlateList: View, TextGeneratable {
                 VStack {
                     ForEach(startIndex..<endIndex, id: \.self) { index in
                         HStack {
-                            Text("\(self.determineText(val: plates[index].wgt))")
+                            Text(PlateUtility.wgtFormat.string(from: NSNumber(value: plates[index].wgt)) ?? "")
                             TextField("0", value: $plates[index].qt, formatter: NumberFormatter())
                                 .frame(width: 25, alignment: .center)
                                 .textFieldStyle(RoundedBorderTextFieldStyle())

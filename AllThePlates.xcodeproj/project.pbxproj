@@ -32,6 +32,7 @@
 		0DED08F1262390FF0023EF4C /* PlateColors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0DED08F0262390FF0023EF4C /* PlateColors.xcassets */; };
 		0DED08F2262390FF0023EF4C /* PlateColors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0DED08F0262390FF0023EF4C /* PlateColors.xcassets */; };
 		0DED091B262396280023EF4C /* PlateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D39C633260414D30050340B /* PlateView.swift */; };
+		0DED0921262396A80023EF4C /* PlateUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D0792E7260156BC006DEC8A /* PlateUtility.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -160,7 +161,6 @@
 		0D39C640260417D60050340B /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				0D39C633260414D30050340B /* PlateView.swift */,
 				0D39C63B260415B90050340B /* BarbellView.swift */,
 				0D528272260503EE0083477F /* PlateList.swift */,
 				0D5282772605046B0083477F /* WeightEditText.swift */,
@@ -270,6 +270,7 @@
 			isa = PBXGroup;
 			children = (
 				0D0792E7260156BC006DEC8A /* PlateUtility.swift */,
+				0D39C633260414D30050340B /* PlateView.swift */,
 				0DED08F0262390FF0023EF4C /* PlateColors.xcassets */,
 			);
 			path = "AllThePlates (Shared)";
@@ -469,6 +470,7 @@
 			files = (
 				0D997525261FE39C0094F289 /* NotificationController.swift in Sources */,
 				0D997523261FE39C0094F289 /* ContentView.swift in Sources */,
+				0DED0921262396A80023EF4C /* PlateUtility.swift in Sources */,
 				0D997529261FE39C0094F289 /* ComplicationController.swift in Sources */,
 				0D997521261FE39C0094F289 /* AllThePlatesApp.swift in Sources */,
 				0D997527261FE39C0094F289 /* NotificationView.swift in Sources */,
