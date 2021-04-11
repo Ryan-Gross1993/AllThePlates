@@ -19,6 +19,10 @@ struct PlateUtility {
         return formatter
     }()
     
+    static func format(_ wgt: Double) -> String {
+        return wgtFormat.string(from: NSNumber(value: wgt)) ?? ""
+    }
+    
     static func generatePlates(qt: Int = 0) -> [Plate] {
         var plates: [Plate] = []
         

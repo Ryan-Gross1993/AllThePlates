@@ -19,7 +19,8 @@ struct PlateList: View {
                 VStack {
                     ForEach(startIndex..<endIndex, id: \.self) { index in
                         HStack {
-                            Text(PlateUtility.wgtFormat.string(from: NSNumber(value: plates[index].wgt)) ?? "")
+                            
+                            Text(PlateUtility.format(plates[index].wgt))
                             TextField("0", value: $plates[index].qt, formatter: NumberFormatter())
                                 .frame(width: 25, alignment: .center)
                                 .textFieldStyle(RoundedBorderTextFieldStyle())

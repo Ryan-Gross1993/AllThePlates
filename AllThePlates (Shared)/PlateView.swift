@@ -28,7 +28,7 @@ struct PlateView: View {
     }
     
     var body: some View {
-        Text(PlateUtility.wgtFormat.string(from: NSNumber(value: self.wgt)) ?? "")
+        Text(PlateUtility.format(self.wgt))
             .frame(width: 25, height: 100)
             .background(Rectangle().foregroundColor(self.color))
             .border(Color.black, width: CGFloat(self.borderWidth))
