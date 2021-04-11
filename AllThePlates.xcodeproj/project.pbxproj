@@ -31,6 +31,7 @@
 		0DD7D02A25EC3B460049D6FC /* AllThePlatesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DD7D02925EC3B460049D6FC /* AllThePlatesUITests.swift */; };
 		0DED08F1262390FF0023EF4C /* PlateColors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0DED08F0262390FF0023EF4C /* PlateColors.xcassets */; };
 		0DED08F2262390FF0023EF4C /* PlateColors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0DED08F0262390FF0023EF4C /* PlateColors.xcassets */; };
+		0DED091B262396280023EF4C /* PlateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D39C633260414D30050340B /* PlateView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -471,6 +472,7 @@
 				0D997529261FE39C0094F289 /* ComplicationController.swift in Sources */,
 				0D997521261FE39C0094F289 /* AllThePlatesApp.swift in Sources */,
 				0D997527261FE39C0094F289 /* NotificationView.swift in Sources */,
+				0DED091B262396280023EF4C /* PlateView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
