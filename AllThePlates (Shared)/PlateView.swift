@@ -11,6 +11,31 @@ import SwiftUI
 struct Plate: Hashable {
     var wgt: Double
     var qt: Int
+    
+    func getHeight() -> Double {
+        switch self.wgt {
+        case 100.0:
+            return 1.0
+        case 55.0:
+            return 0.9
+        case 45.0:
+            return 0.8
+        case 35.0:
+            return 0.7
+        case 25.0:
+            return 0.6
+        case 15.0:
+            return 0.5
+        case 10.0:
+            return 0.4
+        case 5.0:
+            return 0.3
+        case 2.5:
+            return 0.2
+        default:
+            return 0.0
+        }
+    }
 }
 
 struct PlateView: View {
@@ -28,10 +53,14 @@ struct PlateView: View {
     }
     
     var body: some View {
-        Text(PlateUtility.format(self.wgt))
-            .frame(width: 25, height: 100)
-            .background(Rectangle().foregroundColor(self.color))
-            .border(Color.black, width: CGFloat(self.borderWidth))
+        ZStack {
+            Rectangle()
+                .foregroundColor(self.color)
+            Text(PlateUtility.format(self.wgt))
+                .background(self.color)
+                .foregroundColor(.black)
+                .scaledToFit()
+        }
     }
     
     private func getColor() -> Color {

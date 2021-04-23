@@ -10,7 +10,7 @@ import SwiftUI
 struct ContentView: View {
     @State var targetWgt = 145.0
     @State var barWgt = 45.0
-    @State var plates = PlateUtility.generatePlates()
+    @State var plates = PlateUtility.generatePlates(qt: 6)
     
     var body: some View {
         VStack {
@@ -30,6 +30,10 @@ struct ContentView: View {
                 .frame(width: 30, height: 30, alignment: .center)
             }
             Spacer()
+            
+            if let neededPlates = PlateUtility.calculate(targetWgt: targetWgt, barWgt: barWgt, plates: plates) {
+                BarbellView(plates: neededPlates)
+            }
         }
     }
 }

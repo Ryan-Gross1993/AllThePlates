@@ -23,6 +23,7 @@
 		0D99752B261FE39E0094F289 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0D99752A261FE39E0094F289 /* Assets.xcassets */; };
 		0D99752E261FE39E0094F289 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0D99752D261FE39E0094F289 /* Preview Assets.xcassets */; };
 		0D997533261FE39E0094F289 /* ATPWatch.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 0D997512261FE3980094F289 /* ATPWatch.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		0DBABA4C263375E600CACD37 /* BarbellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D39C63B260415B90050340B /* BarbellView.swift */; };
 		0DD7D00D25EC3B440049D6FC /* AllThePlatesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DD7D00C25EC3B440049D6FC /* AllThePlatesApp.swift */; };
 		0DD7D00F25EC3B440049D6FC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DD7D00E25EC3B440049D6FC /* ContentView.swift */; };
 		0DD7D01125EC3B450049D6FC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0DD7D01025EC3B450049D6FC /* Assets.xcassets */; };
@@ -161,7 +162,6 @@
 		0D39C640260417D60050340B /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				0D39C63B260415B90050340B /* BarbellView.swift */,
 				0D528272260503EE0083477F /* PlateList.swift */,
 				0D5282772605046B0083477F /* WeightEditText.swift */,
 			);
@@ -271,6 +271,7 @@
 			children = (
 				0D0792E7260156BC006DEC8A /* PlateUtility.swift */,
 				0D39C633260414D30050340B /* PlateView.swift */,
+				0D39C63B260415B90050340B /* BarbellView.swift */,
 				0DED08F0262390FF0023EF4C /* PlateColors.xcassets */,
 			);
 			path = "AllThePlates (Shared)";
@@ -471,6 +472,7 @@
 				0D997525261FE39C0094F289 /* NotificationController.swift in Sources */,
 				0D997523261FE39C0094F289 /* ContentView.swift in Sources */,
 				0DED0921262396A80023EF4C /* PlateUtility.swift in Sources */,
+				0DBABA4C263375E600CACD37 /* BarbellView.swift in Sources */,
 				0D997529261FE39C0094F289 /* ComplicationController.swift in Sources */,
 				0D997521261FE39C0094F289 /* AllThePlatesApp.swift in Sources */,
 				0D997527261FE39C0094F289 /* NotificationView.swift in Sources */,

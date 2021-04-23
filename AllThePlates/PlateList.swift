@@ -15,7 +15,7 @@ struct PlateList: View {
         HStack {
             ForEach(0..<2, id: \.self) { row in
                 let startIndex = row == 0 ? 0 : 5
-                let endIndex = row == 0 ? 5 : 10
+                let endIndex = row == 0 ? 5 : 9
                 VStack {
                     ForEach(startIndex..<endIndex, id: \.self) { index in
                         HStack {
