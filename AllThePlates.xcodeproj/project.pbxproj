@@ -24,6 +24,7 @@
 		0D99752E261FE39E0094F289 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0D99752D261FE39E0094F289 /* Preview Assets.xcassets */; };
 		0D997533261FE39E0094F289 /* ATPWatch.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 0D997512261FE3980094F289 /* ATPWatch.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		0DBABA4C263375E600CACD37 /* BarbellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D39C63B260415B90050340B /* BarbellView.swift */; };
+		0DBABA5326337B6300CACD37 /* PlateSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DBABA5226337B6300CACD37 /* PlateSettingsView.swift */; };
 		0DD7D00D25EC3B440049D6FC /* AllThePlatesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DD7D00C25EC3B440049D6FC /* AllThePlatesApp.swift */; };
 		0DD7D00F25EC3B440049D6FC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DD7D00E25EC3B440049D6FC /* ContentView.swift */; };
 		0DD7D01125EC3B450049D6FC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0DD7D01025EC3B450049D6FC /* Assets.xcassets */; };
@@ -112,6 +113,7 @@
 		0D99752D261FE39E0094F289 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		0D99752F261FE39E0094F289 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0D997530261FE39E0094F289 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+		0DBABA5226337B6300CACD37 /* PlateSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlateSettingsView.swift; sourceTree = "<group>"; };
 		0DD7D00925EC3B440049D6FC /* AllThePlates.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AllThePlates.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0DD7D00C25EC3B440049D6FC /* AllThePlatesApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllThePlatesApp.swift; sourceTree = "<group>"; };
 		0DD7D00E25EC3B440049D6FC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -189,6 +191,7 @@
 				0D99752F261FE39E0094F289 /* Info.plist */,
 				0D997530261FE39E0094F289 /* PushNotificationPayload.apns */,
 				0D99752C261FE39E0094F289 /* Preview Content */,
+				0DBABA5226337B6300CACD37 /* PlateSettingsView.swift */,
 			);
 			path = "ATPWatch Extension";
 			sourceTree = "<group>";
@@ -469,6 +472,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0DBABA5326337B6300CACD37 /* PlateSettingsView.swift in Sources */,
 				0D997525261FE39C0094F289 /* NotificationController.swift in Sources */,
 				0D997523261FE39C0094F289 /* ContentView.swift in Sources */,
 				0DED0921262396A80023EF4C /* PlateUtility.swift in Sources */,
