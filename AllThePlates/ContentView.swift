@@ -13,7 +13,8 @@ struct ContentView: View {
     @State var targetWgt = 0.0
     @State var barWgt = 0.0
     @State var plates = PlateUtility.generatePlates()
-    
+    @State var calculatedPlates: [Plate] = []
+
     var body: some View {
         VStack {
             HStack {
@@ -48,9 +49,7 @@ struct ContentView: View {
             Spacer()
             
             if platesVisible {
-                if let targetWgt = Double(targetWgt), let barWgt = Double(barWgt), let plates = PlateUtility.calculate(targetWgt: targetWgt, barWgt: barWgt, plates: plates) {
-                    BarbellView(plates: plates)
-                }
+                BarbellView(targetWgt: $targetWgt, barWgt: $barWgt)
             }
         }
     }

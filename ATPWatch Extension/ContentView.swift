@@ -23,7 +23,7 @@ struct ContentView: View {
                     }
                     Spacer()
                     
-                    NavigationLink(destination: PlateSettingsView()) {
+                    NavigationLink(destination: PlateSettingsView(targetWgt: $targetWgt, barWgt: $barWgt)) {
                         Image(systemName: "slider.horizontal.3")
                             .resizable()
                     }
@@ -32,9 +32,7 @@ struct ContentView: View {
                 }
                 Spacer()
                 
-                if let neededPlates = PlateUtility.calculate(targetWgt: targetWgt, barWgt: barWgt, plates: plates) {
-                    BarbellView(plates: neededPlates)
-                }
+                BarbellView(targetWgt: $targetWgt, barWgt: $barWgt)
             }
         }
     }
