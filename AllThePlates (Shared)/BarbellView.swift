@@ -44,10 +44,10 @@ struct BarbellView: View {
                     }
                 }
                 #else
-                if isList {
-                    GeometryReader { proxy in
-                        let frame = proxy.frame(in: .local)
-
+                GeometryReader { proxy in
+                    let frame = proxy.frame(in: .local)
+                    
+                    if isList {
                         VStack {
                             ForEach(plates, id: \.self) { plate in
                                 Text("\(plate.qt)x @ \(PlateUtility.format(plate.wgt))")
@@ -56,18 +56,14 @@ struct BarbellView: View {
                             self.isList = toggleList()
                         }
                         .position(x: frame.midX, y: frame.midY)
-                    }
-                   
-                } else {
-                    Rectangle()
-                        .foregroundColor(.clear)
-                        .border(Color.white, width: 1.0)
-                    
-                    GeometryReader { proxy in
+                    } else {
                         let totalPlates = plates.map{return $0.qt}.reduce(0, +)
-                        let frame = proxy.frame(in: .local)
                         let plateWidth = frame.width / 10
                         let totalWidth = plateWidth * CGFloat(totalPlates) + CGFloat(totalPlates - 1) * 5
+                        
+                        Rectangle()
+                            .foregroundColor(.clear)
+                            .border(Color.white, width: 1.0)
                         
                         HStack(spacing: 0) {
                             ForEach(plates, id: \.self) { plate in
@@ -83,8 +79,9 @@ struct BarbellView: View {
                         }
                         .frame(width: totalWidth, height: frame.height, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
                         .position(x: frame.midX, y: frame.midY)
-                    }.onTapGesture {
-                        self.isList = toggleList()
+                        .onTapGesture {
+                            self.isList = toggleList()
+                        }
                     }
                 }
                 #endif
