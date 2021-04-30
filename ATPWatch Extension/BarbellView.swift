@@ -16,34 +16,6 @@ struct BarbellView: View {
     var body: some View {
         if let plates = PlateUtility.calculate(targetWgt: targetWgt, barWgt: barWgt, plates: PlateUtility.generatePlates(qt: 6)) {
             ZStack {
-                #if os(iOS)
-                Rectangle()
-                    .frame(height: 25, alignment: .center)
-                
-                HStack(spacing: 5) {
-                    ForEach(plates.reversed(), id: \.self) { plate in
-                        if let qtVal = Int(plate.qt) {
-                            ForEach(0..<qtVal) { _ in
-                                PlateView(wgt: plate.wgt)
-                            }
-                        }
-                    }
-                    Spacer()
-                }
-                
-                Spacer()
-                
-                HStack(spacing: 5) {
-                    Spacer()
-                    ForEach(plates, id: \.self) { plate in
-                        if let qtVal = Int(plate.qt) {
-                            ForEach(0..<qtVal) { _ in
-                                PlateView(wgt: plate.wgt)
-                            }
-                        }
-                    }
-                }
-                #else
                 GeometryReader { proxy in
                     let frame = proxy.frame(in: .local)
                     
@@ -84,7 +56,6 @@ struct BarbellView: View {
                         }
                     }
                 }
-                #endif
             }
         }
     }
