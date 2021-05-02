@@ -7,8 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0D528273260503EE0083477F /* PlateList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D528272260503EE0083477F /* PlateList.swift */; };
-		0D5282782605046B0083477F /* WeightEditText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D5282772605046B0083477F /* WeightEditText.swift */; };
+		0D1FFBD6263CC2F400020117 /* CalculationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D1FFBD5263CC2F400020117 /* CalculationView.swift */; };
 		0D90DA7725EF0E2700F2DEB0 /* PlateUtilityTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D90DA7625EF0E2700F2DEB0 /* PlateUtilityTests.swift */; };
 		0D997515261FE39B0094F289 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0D997514261FE39B0094F289 /* Assets.xcassets */; };
 		0D99751C261FE39C0094F289 /* ATPWatch Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 0D99751B261FE39C0094F289 /* ATPWatch Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
@@ -90,10 +89,9 @@
 
 /* Begin PBXFileReference section */
 		0D0792E7260156BC006DEC8A /* PlateUtility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlateUtility.swift; sourceTree = "<group>"; };
+		0D1FFBD5263CC2F400020117 /* CalculationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculationView.swift; sourceTree = "<group>"; };
 		0D39C633260414D30050340B /* PlateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlateView.swift; sourceTree = "<group>"; };
 		0D39C63B260415B90050340B /* BarbellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarbellView.swift; sourceTree = "<group>"; };
-		0D528272260503EE0083477F /* PlateList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlateList.swift; sourceTree = "<group>"; };
-		0D5282772605046B0083477F /* WeightEditText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeightEditText.swift; sourceTree = "<group>"; };
 		0D90DA7625EF0E2700F2DEB0 /* PlateUtilityTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlateUtilityTests.swift; sourceTree = "<group>"; };
 		0D997512261FE3980094F289 /* ATPWatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ATPWatch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0D997514261FE39B0094F289 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -155,13 +153,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0D39C640260417D60050340B /* Views */ = {
+		0D1FFBCE263CC28B00020117 /* Settings */ = {
 			isa = PBXGroup;
 			children = (
-				0D528272260503EE0083477F /* PlateList.swift */,
-				0D5282772605046B0083477F /* WeightEditText.swift */,
+				0DBABA5226337B6300CACD37 /* PlateSettingsView.swift */,
 			);
-			name = Views;
+			name = Settings;
+			sourceTree = "<group>";
+		};
+		0D1FFBD4263CC29C00020117 /* Barbell Calculator */ = {
+			isa = PBXGroup;
+			children = (
+				0D39C633260414D30050340B /* PlateView.swift */,
+				0D39C63B260415B90050340B /* BarbellView.swift */,
+				0D1FFBD5263CC2F400020117 /* CalculationView.swift */,
+			);
+			name = "Barbell Calculator";
 			sourceTree = "<group>";
 		};
 		0D997513261FE3980094F289 /* ATPWatch */ = {
@@ -176,9 +183,9 @@
 		0D99751F261FE39C0094F289 /* ATPWatch Extension */ = {
 			isa = PBXGroup;
 			children = (
+				0D1FFBD4263CC29C00020117 /* Barbell Calculator */,
+				0D1FFBCE263CC28B00020117 /* Settings */,
 				0D0792E7260156BC006DEC8A /* PlateUtility.swift */,
-				0D39C633260414D30050340B /* PlateView.swift */,
-				0D39C63B260415B90050340B /* BarbellView.swift */,
 				0D997520261FE39C0094F289 /* AllThePlatesApp.swift */,
 				0D997522261FE39C0094F289 /* ContentView.swift */,
 				0D997524261FE39C0094F289 /* NotificationController.swift */,
@@ -188,7 +195,6 @@
 				0D99752F261FE39E0094F289 /* Info.plist */,
 				0D997530261FE39E0094F289 /* PushNotificationPayload.apns */,
 				0D99752C261FE39E0094F289 /* Preview Content */,
-				0DBABA5226337B6300CACD37 /* PlateSettingsView.swift */,
 			);
 			path = "ATPWatch Extension";
 			sourceTree = "<group>";
@@ -228,7 +234,6 @@
 		0DD7D00B25EC3B440049D6FC /* AllThePlates */ = {
 			isa = PBXGroup;
 			children = (
-				0D39C640260417D60050340B /* Views */,
 				0DD7D00C25EC3B440049D6FC /* AllThePlatesApp.swift */,
 				0DD7D00E25EC3B440049D6FC /* ContentView.swift */,
 				0DD7D01025EC3B450049D6FC /* Assets.xcassets */,
@@ -463,6 +468,7 @@
 				0D997529261FE39C0094F289 /* ComplicationController.swift in Sources */,
 				0D997521261FE39C0094F289 /* AllThePlatesApp.swift in Sources */,
 				0D997527261FE39C0094F289 /* NotificationView.swift in Sources */,
+				0D1FFBD6263CC2F400020117 /* CalculationView.swift in Sources */,
 				0DED091B262396280023EF4C /* PlateView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -473,8 +479,6 @@
 			files = (
 				0DD7D00F25EC3B440049D6FC /* ContentView.swift in Sources */,
 				0DD7D00D25EC3B440049D6FC /* AllThePlatesApp.swift in Sources */,
-				0D528273260503EE0083477F /* PlateList.swift in Sources */,
-				0D5282782605046B0083477F /* WeightEditText.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
