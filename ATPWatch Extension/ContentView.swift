@@ -16,22 +16,8 @@ struct ContentView: View {
     var body: some View {
         NavigationView {
             VStack {
-                HStack(alignment: VerticalAlignment.center) {
-                    VStack(alignment: HorizontalAlignment.leading) {
-                        Text("Bar: \(PlateUtility.format(self.barWgt))")
-                        Text("Target: \(PlateUtility.format(self.targetWgt))")
-                    }
-                    Spacer()
-                    
-                    NavigationLink(destination: PlateSettingsView(targetWgt: $targetWgt, barWgt: $barWgt)) {
-                        Image(systemName: "slider.horizontal.3")
-                            .resizable()
-                    }
-                    .buttonStyle(PlainButtonStyle())
-                    .frame(width: 30, height: 30, alignment: .center)
-                }
+                HeaderView(targetWgt: $targetWgt, barWgt: $barWgt)
                 Spacer()
-                
                 BarbellView(targetWgt: $targetWgt, barWgt: $barWgt)
             }
         }

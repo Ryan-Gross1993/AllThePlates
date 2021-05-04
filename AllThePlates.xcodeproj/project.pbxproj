@@ -29,6 +29,7 @@
 		0DD7D02A25EC3B460049D6FC /* AllThePlatesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DD7D02925EC3B460049D6FC /* AllThePlatesUITests.swift */; };
 		0DED091B262396280023EF4C /* PlateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D39C633260414D30050340B /* PlateView.swift */; };
 		0DED0921262396A80023EF4C /* PlateUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D0792E7260156BC006DEC8A /* PlateUtility.swift */; };
+		0DFC95AF2641E4E2009EBD63 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DFC95AE2641E4E2009EBD63 /* HeaderView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -119,6 +120,7 @@
 		0DD7D02525EC3B460049D6FC /* AllThePlatesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AllThePlatesUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0DD7D02925EC3B460049D6FC /* AllThePlatesUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllThePlatesUITests.swift; sourceTree = "<group>"; };
 		0DD7D02B25EC3B460049D6FC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0DFC95AE2641E4E2009EBD63 /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -167,6 +169,7 @@
 				0D39C633260414D30050340B /* PlateView.swift */,
 				0D39C63B260415B90050340B /* BarbellView.swift */,
 				0D1FFBD5263CC2F400020117 /* CalculationView.swift */,
+				0DFC95AE2641E4E2009EBD63 /* HeaderView.swift */,
 			);
 			name = "Barbell Calculator";
 			sourceTree = "<group>";
@@ -467,6 +470,7 @@
 				0DBABA4C263375E600CACD37 /* BarbellView.swift in Sources */,
 				0D997529261FE39C0094F289 /* ComplicationController.swift in Sources */,
 				0D997521261FE39C0094F289 /* AllThePlatesApp.swift in Sources */,
+				0DFC95AF2641E4E2009EBD63 /* HeaderView.swift in Sources */,
 				0D997527261FE39C0094F289 /* NotificationView.swift in Sources */,
 				0D1FFBD6263CC2F400020117 /* CalculationView.swift in Sources */,
 				0DED091B262396280023EF4C /* PlateView.swift in Sources */,
