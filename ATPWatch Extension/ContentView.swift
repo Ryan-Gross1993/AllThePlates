@@ -8,17 +8,23 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State var targetWgt = 145.0
-    @State var barWgt = 45.0
-    @State var plates = PlateUtility.generatePlates(qt: 6)
+    @ObservedObject var viewModel = PlateCalculationViewModel()
     
     var body: some View {
         NavigationView {
             VStack {
-                HeaderView(targetWgt: $targetWgt, barWgt: $barWgt)
+                HeaderView(targetWgt: $viewModel.targetWgt, barWgt: $viewModel.barWgt)
                 Spacer()
-                BarbellView(targetWgt: $targetWgt, barWgt: $barWgt)
+                
+                if viewModel.calcPlates == nil {
+                    Text("Not Rackable!")
+                } else {
+                    BarbellView(plates: $viewModel.calcPlates)
+                }
             }
+        }.onAppear {
+            viewModel.barWgt = 45.0
+            viewModel.targetWgt = 145.0
         }
     }
 }
