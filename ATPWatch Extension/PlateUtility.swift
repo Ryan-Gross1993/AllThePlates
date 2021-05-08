@@ -8,7 +8,7 @@
 import Foundation
 
 struct PlateUtility {
-    private static let plateWgts: [Double] = [100, 45, 25, 10, 2.5, 55, 35, 15, 5, 1.25]
+    private static let plateWgts: [Double] = [2.5, 5, 10, 15, 25, 35, 45, 55, 100]
     
     static var wgtFormat: NumberFormatter = {
         let formatter = NumberFormatter()
@@ -19,11 +19,15 @@ struct PlateUtility {
         return formatter
     }()
     
-    static func generatePlates() -> [Plate] {
+    static func format(_ wgt: Double) -> String {
+        return wgtFormat.string(from: NSNumber(value: wgt)) ?? ""
+    }
+    
+    static func generatePlates(qt: Int = 0) -> [Plate] {
         var plates: [Plate] = []
         
         for value in plateWgts {
-            plates.append(Plate(wgt: value, qt: 0))
+            plates.append(Plate(wgt: value, qt: qt))
         }
         
         return plates
