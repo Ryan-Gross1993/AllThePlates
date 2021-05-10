@@ -19,7 +19,7 @@ struct ContentView: View {
                 if viewModel.calcPlates == nil {
                     Text("Not Rackable!")
                 } else {
-                    BarbellView(plates: $viewModel.calcPlates)
+                    CalculationView(plates: $viewModel.calcPlates)
                 }
             }
         }.onAppear {
