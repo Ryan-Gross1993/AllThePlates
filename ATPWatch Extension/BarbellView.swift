@@ -9,7 +9,7 @@ import Foundation
 import SwiftUI
 
 struct BarbellView: View {
-    @Binding var plates: [Plate]?
+    var plates: [Plate]?
     
     var body: some View {
         if let plates = plates {
@@ -19,10 +19,6 @@ struct BarbellView: View {
                     let totalPlates = plates.map{return $0.qt}.reduce(0, +)
                     let plateWidth = frame.width / 10
                     let totalWidth = plateWidth * CGFloat(totalPlates) + CGFloat(totalPlates - 1) * 5
-                    
-                    Rectangle()
-                        .foregroundColor(.clear)
-                        .border(Color.white, width: 1.0)
                     
                     HStack(spacing: 0) {
                         ForEach(plates, id: \.self) { plate in
