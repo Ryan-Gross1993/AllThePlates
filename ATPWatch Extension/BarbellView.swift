@@ -24,7 +24,7 @@ struct BarbellView: View {
                         ForEach(plates, id: \.self) { plate in
                             ForEach(0..<plate.qt) { _ in
                                 PlateView(wgt: plate.wgt)
-                                    .frame(width: 20, height: frame.height * CGFloat(plate.getHeight()))
+                                    .frame(width: 15 * CGFloat(plate.getWidth()), height: frame.height * CGFloat(plate.getHeight()))
                                 
                                 Rectangle()
                                     .foregroundColor(.gray)
