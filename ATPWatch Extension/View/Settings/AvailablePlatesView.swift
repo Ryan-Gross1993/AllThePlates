@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct AvailablePlatesView: View {
+//    @Binding var targetWgt: Double
+//    @Binding var barWgt: Double
+    
     var body: some View {
         EmptyView()
     }
