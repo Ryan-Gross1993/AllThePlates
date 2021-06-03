@@ -12,16 +12,15 @@ struct PlateSettingsView: View {
     @Binding var barWgt: Double
     
     var body: some View {
-        VStack {
+        VStack(spacing: 15) {
             NavigationLink(destination: ChangeWeightsView()) {
                 Text("Change Weights")
-            }.buttonStyle(PlainButtonStyle())
+            }.buttonStyle(DefaultButtonStyle())
             
-            Spacer()
             
             NavigationLink(destination: AvailablePlatesView()) {
                 Text("Available Plates")
-            }.buttonStyle(PlainButtonStyle())
+            }.buttonStyle(DefaultButtonStyle())
         }
     }
 }
