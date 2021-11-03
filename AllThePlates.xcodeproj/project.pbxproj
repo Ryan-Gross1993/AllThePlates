@@ -25,12 +25,15 @@
 		0DD7D01425EC3B450049D6FC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0DD7D01325EC3B450049D6FC /* Preview Assets.xcassets */; };
 		0DD7D01F25EC3B460049D6FC /* AllThePlatesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DD7D01E25EC3B460049D6FC /* AllThePlatesTests.swift */; };
 		0DD7D02A25EC3B460049D6FC /* AllThePlatesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DD7D02925EC3B460049D6FC /* AllThePlatesUITests.swift */; };
-		0DED0921262396A80023EF4C /* PlateUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D0792E7260156BC006DEC8A /* PlateUtility.swift */; };
 		8326193D27334C8700F8DEF0 /* CalculationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8326193927334C8700F8DEF0 /* CalculationView.swift */; };
 		8326193E27334C8700F8DEF0 /* PlateSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8326193A27334C8700F8DEF0 /* PlateSettingsView.swift */; };
 		8326193F27334C8700F8DEF0 /* PlateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8326193B27334C8700F8DEF0 /* PlateView.swift */; };
 		8326194027334C8700F8DEF0 /* BarbellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8326193C27334C8700F8DEF0 /* BarbellView.swift */; };
 		8326194227334D1500F8DEF0 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8326194127334D1500F8DEF0 /* HeaderView.swift */; };
+		83261946273353C200F8DEF0 /* Plate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83261945273353C200F8DEF0 /* Plate.swift */; };
+		83261947273353C200F8DEF0 /* Plate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83261945273353C200F8DEF0 /* Plate.swift */; };
+		83261948273353F200F8DEF0 /* PlateUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D0792E7260156BC006DEC8A /* PlateUtility.swift */; };
+		83261949273353F800F8DEF0 /* PlateUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D0792E7260156BC006DEC8A /* PlateUtility.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -123,6 +126,7 @@
 		8326193B27334C8700F8DEF0 /* PlateView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlateView.swift; sourceTree = "<group>"; };
 		8326193C27334C8700F8DEF0 /* BarbellView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BarbellView.swift; sourceTree = "<group>"; };
 		8326194127334D1500F8DEF0 /* HeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
+		83261945273353C200F8DEF0 /* Plate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Plate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -179,7 +183,6 @@
 			children = (
 				8326193827334C4500F8DEF0 /* View */,
 				0D36757826489A9A008B4C57 /* Model */,
-				0D0792E7260156BC006DEC8A /* PlateUtility.swift */,
 				0D997520261FE39C0094F289 /* AllThePlatesApp.swift */,
 				0D997522261FE39C0094F289 /* ContentView.swift */,
 				0D997524261FE39C0094F289 /* NotificationController.swift */,
@@ -233,6 +236,8 @@
 				0DD7D01025EC3B450049D6FC /* Assets.xcassets */,
 				0DD7D01525EC3B450049D6FC /* Info.plist */,
 				0DD7D01225EC3B450049D6FC /* Preview Content */,
+				83261945273353C200F8DEF0 /* Plate.swift */,
+				0D0792E7260156BC006DEC8A /* PlateUtility.swift */,
 			);
 			path = AllThePlates;
 			sourceTree = "<group>";
@@ -471,7 +476,8 @@
 				0D997523261FE39C0094F289 /* ContentView.swift in Sources */,
 				8326193D27334C8700F8DEF0 /* CalculationView.swift in Sources */,
 				8326194027334C8700F8DEF0 /* BarbellView.swift in Sources */,
-				0DED0921262396A80023EF4C /* PlateUtility.swift in Sources */,
+				83261947273353C200F8DEF0 /* Plate.swift in Sources */,
+				83261949273353F800F8DEF0 /* PlateUtility.swift in Sources */,
 				0DAD9BA02643377200DED162 /* PlateCalculatorViewModel.swift in Sources */,
 				8326194227334D1500F8DEF0 /* HeaderView.swift in Sources */,
 				0D997529261FE39C0094F289 /* ComplicationController.swift in Sources */,
@@ -486,7 +492,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				0DD7D00F25EC3B440049D6FC /* ContentView.swift in Sources */,
+				83261946273353C200F8DEF0 /* Plate.swift in Sources */,
 				0DD7D00D25EC3B440049D6FC /* AllThePlatesApp.swift in Sources */,
+				83261948273353F200F8DEF0 /* PlateUtility.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
