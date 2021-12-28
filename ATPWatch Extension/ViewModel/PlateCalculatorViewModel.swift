@@ -10,6 +10,10 @@ import SwiftUI
 
 class PlateCalculationViewModel: ObservableObject {
     @Published var calcPlates: [Plate]? = []
+	
+	init() {
+		calcPlates = PlateUtility.calculate(targetWgt: targetWgt, barWgt: barWgt, plates: plates)
+	}
     
     private var didChange = PassthroughSubject<Void, Never>()
     private var plates = PlateUtility.generatePlates(qt: 6)
