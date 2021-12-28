@@ -22,9 +22,6 @@ struct ContentView: View {
                     CalculationView(plates: $viewModel.calcPlates)
                 }
             }
-        }.onAppear {
-            viewModel.barWgt = 45.0
-            viewModel.targetWgt = 145.0
         }
     }
 }

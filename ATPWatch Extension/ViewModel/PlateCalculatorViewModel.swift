@@ -14,13 +14,13 @@ class PlateCalculationViewModel: ObservableObject {
     private var didChange = PassthroughSubject<Void, Never>()
     private var plates = PlateUtility.generatePlates(qt: 6)
 
-    var targetWgt = 0.0 { didSet {
+	var targetWgt = 135.0 { didSet {
         didChange.send()
         calcPlates = PlateUtility.calculate(targetWgt: targetWgt, barWgt: barWgt, plates: plates)
     }}
     
     
-    var barWgt = 0.0 { didSet {
+    var barWgt = 45.0 { didSet {
         didChange.send()
         calcPlates = PlateUtility.calculate(targetWgt: targetWgt, barWgt: barWgt, plates: plates)
     }}
