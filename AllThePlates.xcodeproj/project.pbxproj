@@ -161,12 +161,12 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0D36757826489A9A008B4C57 /* Model */ = {
+		0D36757826489A9A008B4C57 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
 				0DAD9B9F2643377200DED162 /* PlateCalculatorViewModel.swift */,
 			);
-			path = Model;
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		0D997513261FE3980094F289 /* ATPWatch */ = {
@@ -182,7 +182,7 @@
 			isa = PBXGroup;
 			children = (
 				8326193827334C4500F8DEF0 /* View */,
-				0D36757826489A9A008B4C57 /* Model */,
+				0D36757826489A9A008B4C57 /* ViewModel */,
 				0D997520261FE39C0094F289 /* AllThePlatesApp.swift */,
 				0D997522261FE39C0094F289 /* ContentView.swift */,
 				0D997524261FE39C0094F289 /* NotificationController.swift */,
